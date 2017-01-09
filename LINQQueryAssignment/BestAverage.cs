@@ -11,15 +11,11 @@ namespace LINQQueryAssignment
         public double TotalGradesAverage(List<string> grades)
         {
             int studentNumber = grades.Count;
-            string joined = string.Join<string>(",", grades);
-            string [] soloGrades = joined.Split(',');
-            var tempArray = Array.ConvertAll(soloGrades, int.Parse);
-            var result = tempArray.OrderByDescending(x => x).ToList();
-            for(int i=0; i < studentNumber; i++)
+            string [] soloGrades = string.Join<string>(",", grades).Split(',');
+            var result = Array.ConvertAll(soloGrades, int.Parse).OrderByDescending(x => x).ToList();
+            for(int i = 0; i < studentNumber; i++)
             {
-                result.Reverse();
-                result.RemoveAt(0);
-                result.Reverse();
+                result.Remove(result.Min());
             }
             double classAverage = result.Average();
             return classAverage;

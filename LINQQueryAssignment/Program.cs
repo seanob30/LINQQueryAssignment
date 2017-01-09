@@ -10,10 +10,16 @@ namespace LINQQueryAssignment
     {
         static void Main(string[] args)
         {
-            List<string> grades = new List<string>() { "90,80,70,95,85,75", "100,90,95,85,75,65", "90,90,90,85,75,60" };
-            CharacterFrequency test = new CharacterFrequency();
-            string check = "warneverchanges";
-            test.Order(check);
+            //CharacterFrequency test = new CharacterFrequency();
+            //string check = "warwarneverchanges";
+            //test.Order(check);
+
+
+            //BestAverage test2 = new BestAverage();
+            //List<string> grades = new List<string>() { "100,100,100,100,100,0", "100,100,100,100,100,0", "100,100,100,100,100,0" };
+            //Console.Write(test2.TotalGradesAverage(grades));
+
+
             Console.ReadKey();
         }
     }
